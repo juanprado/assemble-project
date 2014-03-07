@@ -12,15 +12,15 @@ module.exports = function(grunt){
           tasks: ['js']
         },
         sass: {
-          files: ['./src/sass/**/*.scss'],
+          files: ['./src/assets/sass/**/*.scss'],
           tasks: ['style']
         },
         images:  {
-          files: ['./src/img/**/*'],
+          files: ['./src/assets/img/**/*'],
           tasks: ['copy']
         },
         css: {
-          files: ['./dist/styles/*.css']
+          files: ['./dist/assets/css/*.css']
         },
         livereload: {
           files: ['./dist/**/*'],
@@ -35,9 +35,9 @@ module.exports = function(grunt){
         },
         dist: {
           // the files to concatenate
-          src: ['src/**/*.js'],
+          src: ['src/assets/**/*.js'],
           // the location of the resulting JS file
-          dest: './dist/js/<%= pkg.name %>.js'
+          dest: './dist/assets/js/<%= pkg.name %>.js'
         }
       },
 
@@ -46,12 +46,22 @@ module.exports = function(grunt){
           files: [{
             expand: true,
             dot: true,
-            cwd: './src',
-            dest: './dist',
+            cwd: './src/assets',
+            dest: './dist/assets',
             src: [
               'img/**'
             ]
-          }]
+          },
+          {
+            expand: true,
+            dot: true,
+            cwd: './src/assets',
+            dest: './dist/assets',
+            src: [
+              'fonts/**'
+            ]
+          }
+          ]
         }
       },
         
@@ -62,7 +72,7 @@ module.exports = function(grunt){
         },
         dist: {
           files: {
-            './dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+            './dist/assets/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
           }
         }
       },
@@ -84,7 +94,7 @@ module.exports = function(grunt){
       sass: {
         dist: {
           files: {
-             './dist/styles/main.css': './src/sass/main.scss'
+             './dist/assets/css/main.css': './src/assets/sass/main.scss'
           }
         }
       },
@@ -95,7 +105,7 @@ module.exports = function(grunt){
             browsers: ['last 2 versions', '> 1%']
           },
           files: {
-            './dist/styles/main.css' : './dist/styles/main.css'
+            './dist/assets/css/main.css' : './dist/assets/css/main.css'
           }
         }
       },
@@ -107,22 +117,25 @@ module.exports = function(grunt){
           report: 'gzip'
           },
           files: {
-            './dist/styles/main.min.css' : './dist/styles/main.css'
+            './dist/assets/css/main.min.css' : './dist/assets/css/main.css'
           }
         }
       },
 
       assemble: {
         options: {
-          layout: './src/pages/layout/default.hbs',
+          layout: 'default.hbs',
+          layoutdir: './src/pages/layout',
           partials: './src/pages/partials/**/*.hbs',
-          data: './src/pages/json/**/*.{json,yml}',
-          assets: '.dist/img',
           flatten: true
         },
         pages: {
           src: './src/pages/*.hbs',
           dest: './dist/'
+        },
+        shop: {
+          src: './src/pages/shop/*.hbs',
+          dest: './dist/shop/',
         }
       },
           
@@ -136,7 +149,7 @@ module.exports = function(grunt){
       },
     
       clean: {
-        all: ['./dist/*.html', './dist/img/**']
+        all: ['./dist/*.html', './dist/assets/img/**', './dist/assets/fonts/**']
       },
 
   });

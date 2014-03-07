@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'din-regular';
+	src: url('/assets/fonts/dinrg-webfont.eot');
+	src: url('/assets/fonts/dinrg-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('/assets/fonts/dinrg-webfont.woff') format('woff'),
+	     url('/assets/fonts/dinrg-webfont.ttf') format('truetype'),
+	     url('/assets/fonts/dinrg-webfont.svg#din-regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$din-regular: 'din-regular', sans-serif;

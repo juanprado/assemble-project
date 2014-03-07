@@ -1,0 +1,165 @@
+@mixin absolute-link($width, $height, $left, $top) {
+	position: absolute;
+	display: block;
+	width: $width;
+	height: $height;
+	left: $left;
+	top: $top;
+}
+
+@mixin font($font) {
+	font-family: $font;
+}
+
+@mixin background-img($file) {
+	background-image: url(/assets/img/#{$file});
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+@mixin clearfix {
+	zoom:1;
+	
+	&:before, 
+	&:after {
+		content: "\0020"; 
+		display: block; 
+		height: 0; 
+		overflow: hidden; 
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	background: #5E5F61
+}
+
+body {
+	@include font($din-regular);
+	color: #4D4D4D;
+	background: #FFF;
+	font-size: 18px;
+	margin: 0 auto;
+	width: 1260px;
+}
+
+a,
+a:active {
+	color: #ed1e79;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+// HEADER
+.main-header {
+	@include background-img('header.png');
+	height: 123px;
+	position: relative;
+	width: 100%;
+
+	.home-link {
+		@include absolute-link(135px, 44px, 975px, 0px);
+	}
+
+	.shop-link {
+		@include absolute-link(53px, 23px, 286px, 65px);
+
+		&.active {
+			border-bottom: 2px solid #ed1e79;
+		}
+	}
+}
+
+// HOMEPAGE
+.homepage {
+	@include background-img('homepage.png');
+	height: 2630px;
+	margin: 0 auto;
+	position: relative;
+	width: 1210px;
+}
+
+// SHOP
+.shop-header {
+	@include background-img('/shop/shop-header.png');
+	height: 873px;
+	margin: 0 auto 40px;
+	width: 100%;
+}
+
+.catalogue-container {
+	@include clearfix;
+	width: 980px;
+	margin: 0 auto 35px;
+	position: relative;
+}
+
+.shop-breadcrumbs {
+	position: absolute;
+	display: block;
+	left: 11px;
+	top: 20px;
+}
+
+.catalogue-selectors {
+	@include border-box;
+	float: left;
+	margin-top: 74px;
+	padding: 0 20px 0 11px;
+	width: 179px;
+
+	.category {
+		@include border-box;
+		display: block;
+		border-bottom: 1px solid #4d4d4d;
+		padding: 0 2px 5px;
+
+		.clear {
+			font-size: 15px;
+			display: block;
+			float: right;
+			margin-top: 3px;
+		}
+	}
+}
+
+.catalogue {
+	@include background-img('/shop/shop-catalogue.png');
+	float: right;
+	height: 1067px;
+	width: 801px;
+}
+
+.shop-collection {
+	@include background-img('/shop/shop-collection.png');
+	height: 1770px;
+	margin: 0 auto 35px;
+	width: 975px;
+}
+
+// FOOTER
+.main-footer {
+	@include background-img('footer.png');
+	background-color: #5E5F61;
+	height: 468px;
+	position: relative;
+	width: 100%;
+
+	.shop-link {
+		@include absolute-link(48px, 22px, 145px, 232px);
+	}
+}
+
