@@ -27,6 +27,22 @@
 		&:first-child {
 			margin-left: 0;
 		}
+
+		&.back-link {
+			color: #4D4D4D;
+
+			&:before {
+				content: '<';
+				display: inline-block;
+				margin-right: 5px;
+			}
+
+			&:after {
+				content: '|';
+				display: inline-block;
+				margin-left: 5px;
+			}
+		}
 	}
 
 	&._pink-top {
@@ -257,4 +273,17 @@
 	height: 1770px;
 	margin: 0 auto 35px;
 	width: 975px;
+}
+
+.product-detail {
+	@include background-img('/shop/product-detail.png');
+	height: 2667px;
+	margin: 0 auto;
+	position: relative;
+	width: 1156px;
+
+	.shop-breadcrumbs {
+		left: 95px;
+		top: 10px;
+	}
 }
