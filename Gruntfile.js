@@ -148,7 +148,11 @@ module.exports = function(grunt){
         cart: {
           src: './src/pages/cart/*.hbs',
           dest: './dist/cart/'
-        }
+        },
+        classes: {
+          src: './src/pages/classes/*.hbs',
+          dest: './dist/classes/'
+        },
       },
           
       connect: {

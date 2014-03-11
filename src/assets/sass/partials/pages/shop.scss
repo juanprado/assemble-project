@@ -4,7 +4,12 @@
 	@include background-img('/shop/shop-header.png');
 	height: 873px;
 	margin: 0 auto 40px;
+	position: relative;
 	width: 100%;
+
+	.hot-pink-top-link {
+		@include absolute-link(305px, 333px, 149px, 539px);
+	}
 }
 
 .catalogue-container {
@@ -253,12 +258,8 @@
 
 	.pink-top-link {
 		@include background-img('/shop/pink-top-link.png');
+		@include absolute-link(226px, 228px, 246px, 71px);
 		display: none;
-		height: 228px;
-		left: 246px;
-		position: absolute;
-		top: 71px;
-		width: 226px;
 	}
 
 	&._pink-top {
@@ -283,14 +284,9 @@
 	width: 1156px;
 
 	.pink-circle {
+		@include absolute-link(29px, 29px, 204px, 279px);
 		border-radius: 100%;
-		display: block;
-		position: absolute;
-		width: 29px;
-		height: 29px;
 		background: #ed1e79;
-		top: 279px;
-		left: 204px;
 	}
 
 	.shop-breadcrumbs {
