@@ -1019,3 +1019,61 @@ a:active:focus {
   left: 16px;
   top: 1269px;
 }
+
+.summary {
+  background-image: url(/assets/img//cart/summary.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 1132px;
+  height: 856px;
+  margin: 20px auto 100px;
+  position: relative;
+}
+
+.summary .continue-btn {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 31px;
+  left: 862px;
+  top: 467px;
+}
+
+.summary .complete-purchase {
+  position: absolute;
+  display: block;
+  width: 611px;
+  height: 52px;
+  left: 0px;
+  top: 804px;
+}
+
+.thank-you {
+  background-image: url(/assets/img//cart/thank-you.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 1133px;
+  height: 1273px;
+  margin: 20px auto 70px;
+  position: relative;
+}
+
+.thank-you .continue-btn {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 31px;
+  left: 862px;
+  top: 420px;
+}
+
+.thank-you .back-to-zumba {
+  position: absolute;
+  display: block;
+  width: 641px;
+  height: 77px;
+  left: 0px;
+  top: 1196px;
+}

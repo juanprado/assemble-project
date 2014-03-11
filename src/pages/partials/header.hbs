@@ -1,7 +1,20 @@
 <header class="main-header">
 	<a class="home-link" href="/"></a>
-	<a class="shop-link {{#contains dirname 'shop'}}active{{/contains}}" href="/shop"></a>
-	<a class="header-cart-link {{#contains dirname 'cart'}}_active{{/contains}}" href="/cart/">
+	<a 
+		class="shop-link 
+		{{#contains dirname 'shop'}}active{{/contains}} 
+		{{#contains dirname 'cart'}}active{{/contains}}"
+		href="/shop"
+	></a>
+	<a 
+		class="header-cart-link 
+		{{#contains dirname 'cart'}}
+			{{#isnt page.name 'thank-you'}}
+				_active
+			{{/isnt}}
+		{{/contains}}" 
+		href="/cart/"
+	>
 		<span>1</span>
 	</a>
 </header>

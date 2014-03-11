@@ -52,3 +52,34 @@
 	}
 }
 
+.summary {
+	@include background-img('/cart/summary.png');
+	width: 1132px;
+	height: 856px;
+	margin: 20px auto 100px;
+	position: relative;
+
+	.continue-btn {
+		@include absolute-link(100px, 31px, 862px, 467px);
+	}
+
+	.complete-purchase {
+		@include absolute-link(611px, 52px, 0px, 804px);
+	}
+}
+
+.thank-you {
+	@include background-img('/cart/thank-you.png');
+	width: 1133px;
+	height: 1273px;
+	margin: 20px auto 70px;
+	position: relative;
+
+	.continue-btn {
+		@include absolute-link(100px, 31px, 862px, 420px);
+	}
+
+	.back-to-zumba {
+		@include absolute-link(641px, 77px, 0px, 1196px);
+	}
+}
