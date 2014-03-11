@@ -41,6 +41,27 @@ a:active {
 		}
 	}
 
+	.header-cart-link {
+		@include absolute-link(50px, 39px, 1062px, 56px);
+		display: none;
+
+		&._active {
+			display: block;
+		}
+
+		span {
+			@include font($din-medium);
+			color: #000;
+			display: block;
+			padding: 2px;
+			background: #d8df51;
+			position: absolute;
+			top: 2px;
+			left: 32px;
+			font-size: 13px;
+		}
+	}
+
 	&._fixed {
 		position: fixed;
 		top: 0;

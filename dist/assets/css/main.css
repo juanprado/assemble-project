@@ -498,6 +498,32 @@ a:active:focus {
   border-bottom: 2px solid #ed1e79;
 }
 
+.main-header .header-cart-link {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 39px;
+  left: 1062px;
+  top: 56px;
+  display: none;
+}
+
+.main-header .header-cart-link._active {
+  display: block;
+}
+
+.main-header .header-cart-link span {
+  font-family: 'din-medium', sans-serif;
+  color: black;
+  display: block;
+  padding: 2px;
+  background: #d8df51;
+  position: absolute;
+  top: 2px;
+  left: 32px;
+  font-size: 13px;
+}
+
 .main-header._fixed {
   position: fixed;
   top: 0;
@@ -855,7 +881,141 @@ a:active:focus {
   width: 1156px;
 }
 
+.product-detail .pink-circle {
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  background: #ed1e79;
+  top: 279px;
+  left: 204px;
+}
+
 .product-detail .shop-breadcrumbs {
   left: 95px;
   top: 10px;
+}
+
+.product-detail .add-to-cart {
+  background-image: url(/assets/img//shop/cart.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+  left: 94px;
+  height: 62px;
+  position: absolute;
+  top: 579px;
+  width: 152px;
+}
+
+.product-detail .add-to-cart.ready-cart {
+  background-image: url(/assets/img//shop/ready-cart.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.product-detail .add-to-cart.loading-cart {
+  background-image: url(/assets/img//shop/loading-cart.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.cart-index {
+  background-image: url(/assets/img//cart/cart-index.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 1133px;
+  height: 1225px;
+  margin: 20px auto 35px;
+  position: relative;
+}
+
+.cart-index .continue-btn {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 31px;
+  left: 865px;
+  top: 379px;
+}
+
+.cart-index .proceed-with-checkout {
+  position: absolute;
+  display: block;
+  width: 253px;
+  height: 41px;
+  left: 17px;
+  top: 1113px;
+}
+
+.shipping {
+  background-image: url(/assets/img//cart/shipping.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 1133px;
+  height: 1149px;
+  margin: 20px auto 70px;
+  position: relative;
+}
+
+.shipping .continue-btn {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 31px;
+  left: 863px;
+  top: 468px;
+}
+
+.shipping .enter-payment-info {
+  position: absolute;
+  display: block;
+  width: 611px;
+  height: 52px;
+  left: 2px;
+  top: 1097px;
+}
+
+.payment {
+  background-image: url(/assets/img//cart/payment.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 1132px;
+  height: 1321px;
+  margin: 20px auto 70px;
+  position: relative;
+}
+
+.payment .shipping-link {
+  position: absolute;
+  display: block;
+  width: 611px;
+  height: 63px;
+  left: 0px;
+  top: 106px;
+}
+
+.payment .continue-btn {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 31px;
+  left: 862px;
+  top: 467px;
+}
+
+.payment .order-confirmation {
+  position: absolute;
+  display: block;
+  width: 611px;
+  height: 52px;
+  left: 16px;
+  top: 1269px;
 }

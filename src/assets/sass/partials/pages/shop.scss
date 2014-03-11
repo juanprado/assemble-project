@@ -282,8 +282,37 @@
 	position: relative;
 	width: 1156px;
 
+	.pink-circle {
+		border-radius: 100%;
+		display: block;
+		position: absolute;
+		width: 29px;
+		height: 29px;
+		background: #ed1e79;
+		top: 279px;
+		left: 204px;
+	}
+
 	.shop-breadcrumbs {
 		left: 95px;
 		top: 10px;
+	}
+
+	.add-to-cart {
+		@include background-img('/shop/cart.png');
+		cursor: pointer;
+		left: 94px;
+		height: 62px;
+		position: absolute;
+		top: 579px;
+		width: 152px;
+
+		&.ready-cart {
+			@include background-img('/shop/ready-cart.png');
+		}
+
+		&.loading-cart {
+			@include background-img('/shop/loading-cart.png');
+		}
 	}
 }

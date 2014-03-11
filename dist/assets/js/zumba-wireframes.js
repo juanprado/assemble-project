@@ -195,3 +195,38 @@ var colorSelection = {
 };
 
 colorSelection.init();
+
+// GO TO CART
+var goToCart = {
+
+	el: {},
+
+	cacheElems: function() {
+		this.el.button = $('.add-to-cart');
+		this.el.cartLink = $('.header-cart-link');
+	},
+
+	loadCartLinks: function() {
+		var self = this;
+
+		this.el.button.on('click', function(e) {
+			var src = $(this).data('src');
+
+			e.preventDefault();
+			$(this).addClass('loading-cart');
+			self.el.cartLink.addClass('_active');
+			$(this).attr('href', src);
+			$(this).removeClass('loading-cart');
+			$(this).addClass('ready-cart');
+			$(this).off('click');
+		});
+	},
+
+	init: function() {
+		this.cacheElems();
+		this.loadCartLinks();
+	}
+
+};
+
+goToCart.init();

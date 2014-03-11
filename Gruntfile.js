@@ -144,6 +144,10 @@ module.exports = function(grunt){
         product: {
           src: './src/pages/shop/product/*.hbs',
           dest: './dist/shop/product/'
+        },
+        cart: {
+          src: './src/pages/cart/*.hbs',
+          dest: './dist/cart/'
         }
       },
           
