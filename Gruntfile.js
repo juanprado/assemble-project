@@ -79,7 +79,7 @@ module.exports = function(grunt){
 
       jshint: {
         // define the files to lint
-        files: ['gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+        files: ['gruntfile.js', 'src/assets/**/*.js', 'test/**/*.js'],
         // configure JSHint (documented at http://www.jshint.com/docs/)
         options: {
           // more options here if you want to override JSHint defaults
@@ -135,7 +135,15 @@ module.exports = function(grunt){
         },
         shop: {
           src: './src/pages/shop/*.hbs',
-          dest: './dist/shop/',
+          dest: './dist/shop/'
+        },
+        women: {
+          src: './src/pages/shop/women/*.hbs',
+          dest: './dist/shop/women/'
+        },
+        product: {
+          src: './src/pages/shop/product/*.hbs',
+          dest: './dist/shop/product/'
         }
       },
           
