@@ -33,6 +33,14 @@ a:active {
 		@include absolute-link(135px, 44px, 975px, 0px);
 	}
 
+	.classes-link {
+		@include absolute-link(81px, 23px, 148px, 65px);
+
+		&.active {
+			border-bottom: 2px solid #ed1e79;
+		}
+	}
+
 	.shop-link {
 		@include absolute-link(53px, 23px, 286px, 65px);
 

@@ -485,6 +485,19 @@ a:active:focus {
   top: 0px;
 }
 
+.main-header .classes-link {
+  position: absolute;
+  display: block;
+  width: 81px;
+  height: 23px;
+  left: 148px;
+  top: 65px;
+}
+
+.main-header .classes-link.active {
+  border-bottom: 2px solid #ed1e79;
+}
+
 .main-header .shop-link {
   position: absolute;
   display: block;
