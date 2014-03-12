@@ -90,6 +90,19 @@ a:active {
 	margin: 10px 0;
 	position: relative;
 	width: 1210px;
+
+	.find-a-class {
+		@include absolute-link(141px, 32px, 966px, 300px);
+	}
+
+	.location-input {
+		background: #fff;
+		right: 102px;
+		top: 258px;
+		width: 113px;
+		line-height: 27px
+	}
+
 }
 
 // FOOTER

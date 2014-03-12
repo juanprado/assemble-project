@@ -565,6 +565,23 @@ a:active:focus {
   width: 1210px;
 }
 
+.homepage .find-a-class {
+  position: absolute;
+  display: block;
+  width: 141px;
+  height: 32px;
+  left: 966px;
+  top: 300px;
+}
+
+.homepage .location-input {
+  background: white;
+  right: 102px;
+  top: 258px;
+  width: 113px;
+  line-height: 27px;
+}
+
 .main-footer {
   background-image: url(/assets/img/footer.png);
   background-repeat: no-repeat;
