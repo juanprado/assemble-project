@@ -29,6 +29,10 @@ a:active {
 	position: relative;
 	width: 100%;
 
+	.logo-link {
+		@include absolute-link(155px, 44px, 554px, 58px);
+	}
+
 	.home-link {
 		@include absolute-link(135px, 44px, 975px, 0px);
 	}

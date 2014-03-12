@@ -24,6 +24,11 @@
 	margin: 20px auto 35px;
 	position: relative;
 
+	#become-an-instructor {
+		position: absolute;
+		top: -230px;
+	}
+
 	.zumba-basic-link {
 		@include absolute-link(155px, 144px, 17px, 286px);
 	}
