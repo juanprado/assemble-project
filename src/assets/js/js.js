@@ -233,6 +233,7 @@ var goToCart = {
 goToCart.init();
 
 
+//FILTER UPDATE FORM
 var formUpdate = {
 
 	el: {},
@@ -266,7 +267,6 @@ var formUpdate = {
 			filterJoined = "." + filterHolder.join('.');
 			$('.map-icon').css('display', 'none');
 			$(filterJoined).css('display', 'block');
-			console.log(filterJoined);
 
 		});
 	},
