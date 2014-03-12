@@ -243,17 +243,28 @@ var formUpdate = {
 	},
 
 	bindElm: function() {
-		var filterHolder = [ ];
+		var filterHolder = [ ],
+			filterJoined = "";
 
 		this.el.checkItems.on('change', function(){
 			// var $this = $(this);
 
 			// filterHolder.push($(this).val());
 			// console.log(filterHolder.join(" "));
+			filterHolder = [ ];
 
-			for (i=0; i < this.el.checkItems.length; i++){
-				console.log(this.el.checkItems);
+			for (i=0; i < formUpdate.el.checkItems.length; i++){
+				if (formUpdate.el.checkItems.eq(i).is(':checkbox')){
+					if (formUpdate.el.checkItems.eq(i).is(":checked")){
+						filterHolder.push(formUpdate.el.checkItems.eq(i).val());
+					}
+				} else {
+					filterHolder.push(formUpdate.el.checkItems.eq(i).val());
+				}
 			}
+
+			filterJoined = "." + filterHolder.join('.');
+			console.log(filterJoined);
 		});
 	},
 
