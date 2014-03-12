@@ -215,12 +215,22 @@ var goToCart = {
 
 			e.preventDefault();
 			$(this).addClass('loading-cart');
-			self.el.cartLink.addClass('_active');
-			$(this).attr('href', src);
-			$(this).removeClass('loading-cart');
 			$(this).off('click');
-			$(this).addClass('ready-cart');
+
+			setTimeout(function() {
+				self.cartLinkReady();
+			}, 1000);
+
 		});
+	},
+
+	cartLinkReady: function() {
+		var src = this.el.button.data('src');
+
+		this.el.button.removeClass('loading-cart');
+		this.el.button.addClass('ready-cart');
+		this.el.button.attr('href', src);
+		this.el.cartLink.addClass('_active');
 	},
 
 	init: function() {
@@ -232,7 +242,7 @@ var goToCart = {
 
 goToCart.init();
 
-
+// FORM UPDATE
 var formUpdate = {
 
 	el: {},

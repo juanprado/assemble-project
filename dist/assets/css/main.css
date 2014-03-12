@@ -1119,7 +1119,7 @@ a:active:focus {
 }
 
 .map-container .map-container-item {
-  background-image: url(/assets/img/map/map.jpg);
+  background-image: url(/assets/img/classes/map.png);
   height: 638px;
   width: 100%;
 }

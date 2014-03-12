@@ -215,12 +215,22 @@ var goToCart = {
 
 			e.preventDefault();
 			$(this).addClass('loading-cart');
-			self.el.cartLink.addClass('_active');
-			$(this).attr('href', src);
-			$(this).removeClass('loading-cart');
 			$(this).off('click');
-			$(this).addClass('ready-cart');
+
+			setTimeout(function() {
+				self.cartLinkReady();
+			}, 1000);
+
 		});
+	},
+
+	cartLinkReady: function() {
+		var src = this.el.button.data('src');
+
+		this.el.button.removeClass('loading-cart');
+		this.el.button.addClass('ready-cart');
+		this.el.button.attr('href', src);
+		this.el.cartLink.addClass('_active');
 	},
 
 	init: function() {
@@ -232,7 +242,7 @@ var goToCart = {
 
 goToCart.init();
 
-
+// FORM UPDATE
 var formUpdate = {
 
 	el: {},
@@ -243,17 +253,28 @@ var formUpdate = {
 	},
 
 	bindElm: function() {
-		var filterHolder = [ ];
+		var filterHolder = [ ],
+			filterJoined = "";
 
 		this.el.checkItems.on('change', function(){
 			// var $this = $(this);
 
 			// filterHolder.push($(this).val());
 			// console.log(filterHolder.join(" "));
+			filterHolder = [ ];
 
-			for (i=0; i < this.el.checkItems.length; i++){
-				console.log(this.el.checkItems);
+			for (i=0; i < formUpdate.el.checkItems.length; i++){
+				if (formUpdate.el.checkItems.eq(i).is(':checkbox')){
+					if (formUpdate.el.checkItems.eq(i).is(":checked")){
+						filterHolder.push(formUpdate.el.checkItems.eq(i).val());
+					}
+				} else {
+					filterHolder.push(formUpdate.el.checkItems.eq(i).val());
+				}
 			}
+
+			filterJoined = "." + filterHolder.join('.');
+			console.log(filterJoined);
 		});
 	},
 
