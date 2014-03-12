@@ -1214,6 +1214,7 @@ a:active:focus {
 
 .map-container .map-container-item .map-icon:hover .icon-bubble {
   display: block;
+  z-index: 3;
 }
 
 .map-container .map-container-item .map-icon .inner-copy {
