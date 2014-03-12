@@ -1118,12 +1118,12 @@ a:active:focus {
   position: relative;
 }
 
-.class-grid .zumba-link {
+.class-grid .zumba-toning-link {
   position: absolute;
   display: block;
   width: 158px;
   height: 144px;
-  left: 0px;
+  left: 320px;
   top: 41px;
 }
 
@@ -1181,8 +1181,8 @@ a:active:focus {
   top: 327px;
 }
 
-.zumba {
-  background-image: url(/assets/img//classes/zumba.png);
+.zumba-toning {
+  background-image: url(/assets/img//classes/zumba-toning.png);
   background-repeat: no-repeat;
   -webkit-background-size: 100%;
   background-size: 100%;
@@ -1192,12 +1192,12 @@ a:active:focus {
   position: relative;
 }
 
-.zumba .location-input {
+.zumba-toning .location-input {
   top: 346px;
   left: 240px;
 }
 
-.zumba .find-a-class {
+.zumba-toning .find-a-class {
   position: absolute;
   display: block;
   width: 122px;
@@ -1218,7 +1218,7 @@ a:active:focus {
 }
 
 .all-classes .location-input {
-  top: 985px;
+  top: 1820px;
   left: 243px;
 }
 
@@ -1228,7 +1228,60 @@ a:active:focus {
   width: 122px;
   height: 32px;
   left: 393px;
-  top: 984px;
-  background: blue;
-  opacity: 0.5;
+  top: 1819px;
+}
+
+.results {
+  background-image: url(/assets/img//classes/results.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 959px;
+  height: 940px;
+  margin: 30px auto 60px;
+  position: relative;
+}
+
+.results .location-details-link {
+  position: absolute;
+  display: block;
+  width: 134px;
+  height: 30px;
+  left: 800px;
+  top: 199px;
+}
+
+.location-details {
+  background-image: url(/assets/img//classes/location-details.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 975px;
+  height: 1787px;
+  margin: 0 auto 35px;
+  position: relative;
+}
+
+.location-details .blink-fitness-map {
+  background-image: url(/assets/img//classes/blink-fitness-map.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  display: block;
+  width: 306px;
+  height: 306px;
+  left: 0px;
+  top: 0px;
+}
+
+.instructor-details {
+  background-image: url(/assets/img//classes/instructor-details.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 988px;
+  height: 1741px;
+  margin: 20px auto 35px;
+  position: relative;
 }

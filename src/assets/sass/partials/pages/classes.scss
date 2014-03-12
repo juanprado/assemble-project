@@ -12,8 +12,8 @@
 	margin: 20px auto;
 	position: relative;
 
-	.zumba-link {
-		@include absolute-link(158px, 144px, 0px, 41px);
+	.zumba-toning-link {
+		@include absolute-link(158px, 144px, 320px, 41px);
 	}
 }
 
@@ -55,8 +55,8 @@
 	}
 }
 
-.zumba {
-	@include background-img('/classes/zumba.png');
+.zumba-toning {
+	@include background-img('/classes/zumba-toning.png');
 	width: 1111px;
 	height: 1960px;
 	margin: 10px 0 20px 0;
@@ -80,13 +80,44 @@
 	position: relative;
 
 	.location-input {
-		top: 985px;
+		top: 1820px;
 		left: 243px;
 	}
 
 	.find-a-class {
-		@include absolute-link(122px, 32px, 393px, 984px);
-		background: blue;
-		opacity: 0.5;
+		@include absolute-link(122px, 32px, 393px, 1819px);
 	}
+}
+
+.results {
+	@include background-img('/classes/results.png');
+	width: 959px;
+	height: 940px;
+	margin: 30px auto 60px;
+	position: relative;
+
+	.location-details-link {
+		@include absolute-link(134px, 30px, 800px, 199px);
+	}
+}
+
+.location-details {
+	@include background-img('/classes/location-details.png');
+	width: 975px;
+	height: 1787px;
+	margin: 0 auto 35px;
+	position: relative;
+
+	.blink-fitness-map {
+		@include background-img('/classes/blink-fitness-map.png');
+		@include absolute-link(306px, 306px, 0px, 0px);
+	}
+}
+
+.instructor-details {
+	@include background-img('/classes/instructor-details.png');
+	width: 988px;
+	height: 1741px;
+	margin: 20px auto 35px;
+	position: relative;
 }
