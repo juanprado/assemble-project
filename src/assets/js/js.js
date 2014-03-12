@@ -246,10 +246,14 @@ var formUpdate = {
 		var filterHolder = [ ];
 
 		this.el.checkItems.on('change', function(){
-			var $this = $(this);
+			// var $this = $(this);
 
-			filterHolder.push($(this).val());
-			console.log(filterHolder.join(" "));
+			// filterHolder.push($(this).val());
+			// console.log(filterHolder.join(" "));
+
+			for (i=0; i < this.el.checkItems.length; i++){
+				console.log(this.el.checkItems);
+			}
 		});
 	},
 
