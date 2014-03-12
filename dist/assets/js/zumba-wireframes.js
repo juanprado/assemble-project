@@ -287,3 +287,30 @@ var formUpdate = {
 };
 
 formUpdate.init();
+
+// LOCATION INPUT
+
+var locationInput = {
+
+	el: {},
+
+	cacheElems: function() {
+		this.el.locationInput = $('.location-input');
+		this.el.button = $('.find-a-class');
+	},
+
+	init: function() {
+		var self = this;
+		this.cacheElems();
+
+		this.el.locationInput.keypress(function(e) {
+			var src = self.el.button.attr('href');
+
+			if (e.which === 13) {
+				window.location = src;
+			}
+		});
+	}
+};
+
+locationInput.init();
