@@ -1101,3 +1101,134 @@ a:active:focus {
   left: 0px;
   top: 1196px;
 }
+
+.classes-breadcrumbs {
+  width: 961px;
+  margin: 10px auto 30px;
+}
+
+.class-grid {
+  background-image: url(/assets/img//classes/class-grid.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 959px;
+  height: 331px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.class-grid .zumba-link {
+  position: absolute;
+  display: block;
+  width: 158px;
+  height: 144px;
+  left: 0px;
+  top: 41px;
+}
+
+.instructor-grid {
+  background-image: url(/assets/img//classes/instructor-grid.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 976px;
+  height: 1835px;
+  margin: 20px auto 35px;
+  position: relative;
+}
+
+.instructor-grid .zumba-basic-link {
+  position: absolute;
+  display: block;
+  width: 155px;
+  height: 144px;
+  left: 17px;
+  top: 286px;
+}
+
+.location-input {
+  background: white;
+  font-size: 17px;
+  border: 0;
+  line-height: 28px;
+  position: absolute;
+  width: 147px;
+}
+
+.zumba-basic {
+  background-image: url(/assets/img//classes/zumba-basic.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 975px;
+  height: 1409px;
+  margin: 10px auto -16px;
+  position: relative;
+}
+
+.zumba-basic .location-input {
+  top: 328px;
+  left: 105px;
+}
+
+.zumba-basic .find-a-class {
+  position: absolute;
+  display: block;
+  width: 122px;
+  height: 32px;
+  left: 256px;
+  top: 327px;
+}
+
+.zumba {
+  background-image: url(/assets/img//classes/zumba.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  width: 1111px;
+  height: 1960px;
+  margin: 10px 0 20px 0;
+  position: relative;
+}
+
+.zumba .location-input {
+  top: 346px;
+  left: 240px;
+}
+
+.zumba .find-a-class {
+  position: absolute;
+  display: block;
+  width: 122px;
+  height: 32px;
+  left: 392px;
+  top: 345px;
+}
+
+.all-classes {
+  background-image: url(/assets/img//classes/all-classes.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  margin: 0 0 10px;
+  width: 1211px;
+  height: 5284px;
+  position: relative;
+}
+
+.all-classes .location-input {
+  top: 985px;
+  left: 243px;
+}
+
+.all-classes .find-a-class {
+  position: absolute;
+  display: block;
+  width: 122px;
+  height: 32px;
+  left: 393px;
+  top: 984px;
+  background: blue;
+  opacity: 0.5;
+}
