@@ -217,8 +217,8 @@ var goToCart = {
 			self.el.cartLink.addClass('_active');
 			$(this).attr('href', src);
 			$(this).removeClass('loading-cart');
-			$(this).addClass('ready-cart');
 			$(this).off('click');
+			$(this).addClass('ready-cart');
 		});
 	},
 
