@@ -1,0 +1,123 @@
+// CLASSES
+
+.classes-breadcrumbs {
+	width: 961px;
+	margin: 10px auto 30px;
+}
+
+.class-grid {
+	@include background-img('/classes/class-grid.png');
+	width: 959px;
+	height: 331px;
+	margin: 20px auto;
+	position: relative;
+
+	.zumba-toning-link {
+		@include absolute-link(158px, 144px, 320px, 41px);
+	}
+}
+
+.instructor-grid {
+	@include background-img('/classes/instructor-grid.png');
+	width: 976px;
+	height: 1835px;
+	margin: 20px auto 35px;
+	position: relative;
+
+	.zumba-basic-link {
+		@include absolute-link(155px, 144px, 17px, 286px);
+	}
+}
+
+.location-input {
+	background: #FFF;
+	font-size: 17px;
+	border: 0;
+	line-height: 28px;
+	position: absolute;
+	width: 147px;
+}
+
+.zumba-basic {
+	@include background-img('/classes/zumba-basic.png');
+	width: 975px;
+	height: 1409px;
+	margin: 10px auto -16px;
+	position: relative;
+
+	.location-input {
+		top: 328px;
+		left: 105px;
+	}
+
+	.find-a-class {
+		@include absolute-link(122px, 32px, 256px, 327px);
+	}
+}
+
+.zumba-toning {
+	@include background-img('/classes/zumba-toning.png');
+	width: 1111px;
+	height: 1960px;
+	margin: 10px 0 20px 0;
+	position: relative;
+
+	.location-input {
+		top: 346px;
+		left: 240px;
+	}
+
+	.find-a-class {
+		@include absolute-link(122px, 32px, 392px, 345px);
+	}
+}
+
+.all-classes {
+	@include background-img('/classes/all-classes.png');
+	margin: 0 0 10px;
+	width: 1211px;
+	height: 5284px;
+	position: relative;
+
+	.location-input {
+		top: 1820px;
+		left: 243px;
+	}
+
+	.find-a-class {
+		@include absolute-link(122px, 32px, 393px, 1819px);
+	}
+}
+
+.results {
+	@include background-img('/classes/results.png');
+	width: 959px;
+	height: 940px;
+	margin: 30px auto 60px;
+	position: relative;
+
+	.location-details-link {
+		@include absolute-link(134px, 30px, 800px, 199px);
+	}
+}
+
+.location-details {
+	@include background-img('/classes/location-details.png');
+	width: 975px;
+	height: 1787px;
+	margin: 0 auto 35px;
+	position: relative;
+
+	.blink-fitness-map {
+		@include background-img('/classes/blink-fitness-map.png');
+		@include absolute-link(306px, 306px, 0px, 0px);
+	}
+}
+
+.instructor-details {
+	@include background-img('/classes/instructor-details.png');
+	width: 988px;
+	height: 1741px;
+	margin: 20px auto 35px;
+	position: relative;
+}
