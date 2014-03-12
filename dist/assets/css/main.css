@@ -1451,7 +1451,7 @@ a:active:focus {
   background-size: 100%;
   width: 959px;
   height: 331px;
-  margin: 20px auto;
+  margin: 20px auto 35px;
   position: relative;
 }
 
@@ -1471,7 +1471,7 @@ a:active:focus {
   background-size: 100%;
   width: 976px;
   height: 1835px;
-  margin: 20px auto 35px;
+  margin: 35px auto 35px;
   position: relative;
 }
 
