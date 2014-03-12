@@ -242,7 +242,7 @@ var goToCart = {
 
 goToCart.init();
 
-// FORM UPDATE
+//FILTER UPDATE FORM
 var formUpdate = {
 
 	el: {},
@@ -274,7 +274,9 @@ var formUpdate = {
 			}
 
 			filterJoined = "." + filterHolder.join('.');
-			console.log(filterJoined);
+			$('.map-icon').css('display', 'none');
+			$(filterJoined).css('display', 'block');
+
 		});
 	},
 

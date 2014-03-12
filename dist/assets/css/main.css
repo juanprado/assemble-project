@@ -1122,6 +1122,66 @@ a:active:focus {
   background-image: url(/assets/img/classes/map.png);
   height: 638px;
   width: 100%;
+  position: relative;
+}
+
+.map-container .map-container-item .map-icon {
+  position: absolute;
+}
+
+.map-container .map-container-item .map-icon:hover .icon-bubble {
+  display: block;
+}
+
+.map-container .map-container-item .map-icon .inner-copy {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+}
+
+.map-container .map-container-item .icon-bubble {
+  background-image: url(/assets/img/map/word-bubble.png);
+  display: none;
+  height: 85px;
+  width: 264px;
+  position: absolute;
+  top: -86px;
+  left: -204px;
+}
+
+.map-container .map-container-item .icon-1 {
+  top: 550px;
+  left: 350px;
+}
+
+.map-container .map-container-item .icon-2 {
+  top: 150px;
+  left: 350px;
+}
+
+.map-container .map-container-item .icon-3 {
+  top: 250px;
+  left: 295px;
+}
+
+.map-container .map-container-item .icon-4 {
+  top: 137px;
+  left: 50px;
+}
+
+.map-container .map-container-item .icon-5 {
+  top: 375px;
+  left: 820px;
+}
+
+.map-container .map-container-item .icon-6 {
+  top: 462px;
+  left: 500px;
+}
+
+.map-container .map-container-item .icon-7 {
+  top: 262px;
+  left: 642px;
 }
 
 .map-container .filter-container {
@@ -1263,6 +1323,36 @@ a:active:focus {
 .map-container .checkbox-container .checkbox-label {
   margin-left: 10px;
   float: left;
+}
+
+.map-container .start-time,
+.map-container .end-time {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.map-container .start-time {
+  text-align: left;
+}
+
+.map-container .end-time {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.map-container .cancel-button {
+  display: block;
+  position: absolute;
+  bottom: -200px;
+  background-color: #666666;
+  color: white;
+  font-weight: 600;
+  padding: 5px 15px 10px;
 }
 
 .classes-breadcrumbs {
