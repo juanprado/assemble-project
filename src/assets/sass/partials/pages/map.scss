@@ -1,1 +1,124 @@
 // map scss
+.map-container {
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	width: 960px;
+
+	.map-container-item{
+		background-image: url(/assets/img/map/map.jpg);
+		height: 638px;
+		width: 100%;
+	}
+
+	.filter-container {
+		box-sizing: border-box;
+		left: 0;
+		opacity: .9;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.filter-top-container {
+		background-color: #cdcdcd;
+		padding: 25px 15px 25px;
+
+		input {
+			box-sizing: border-box;
+			height: 50px;
+			padding: 10px;
+			width: 368px;
+		}
+
+		a {
+			float: right;
+			margin: 10px 10px 0 0;
+		}
+	}
+
+	.filter-bottom-container {
+		@include clearfix();
+		background-color: #cdcdcd;
+		display: none;
+		padding: 0 15px 135px;
+
+		h4, h5{
+			font-size: 18px;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-bottom: 0px;
+		}
+
+		h4{
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		h5 {
+			border-bottom: 1px solid #000;
+			font-weight: 200;
+			margin: 15px 0;
+			padding-bottom: 15px;
+		}
+
+		h6 {
+			margin: 0;
+			position: absolute;
+			top: 22px;
+			right: 22px;
+		}
+
+		.column-wide, .column-short {
+			float: left;
+			padding-left: 50px;
+		}
+
+		.column-short {
+			position: relative;
+			width: 150px;
+
+			h5{
+				width: 85%;
+			}
+		}
+
+		.column-wide {
+			padding-left: 0px;
+			width: 275px;
+		}
+	}
+
+	.distance-container {
+		@include clearfix();
+	}
+
+	.custom-dropdown {
+		width: 100%;
+
+		&.half {
+			box-sizing: border-box;
+			float: left;
+			padding-right: 10px;
+			width: 25%;
+		}
+
+		select {
+			width: 100%;
+		}
+	}
+
+	.checkbox-container {
+		.checkbox-item {
+			margin-top: 5px;
+			clear: left;
+			float: left;
+		}
+
+		.checkbox-label {
+			margin-left: 10px;
+			float: left;
+		}
+	}
+}

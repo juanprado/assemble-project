@@ -11,6 +11,7 @@ var accordion = {
 		var self = this;
 
 		this.el.accordionTrigger.on('click', function() {
+			event.preventDefault();
 			var target = $(this).data('target');
 
 			if ($(target).hasClass('_active')) {
@@ -230,3 +231,32 @@ var goToCart = {
 };
 
 goToCart.init();
+
+
+var formUpdate = {
+
+	el: {},
+
+	cacheElems: function() {
+		this.el.mapFilter = $('[data-module="map-filters"]');
+		this.el.checkItems = this.el.mapFilter.find('.change-event');
+	},
+
+	bindElm: function() {
+		var filterHolder = [ ];
+
+		this.el.checkItems.on('change', function(){
+			var $this = $(this);
+
+			filterHolder.push($(this).val());
+			console.log(filterHolder.join(" "));
+		});
+	},
+
+	init: function() {
+		this.cacheElems();
+		this.bindElm();
+	}
+};
+
+formUpdate.init();
