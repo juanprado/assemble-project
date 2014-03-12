@@ -38,10 +38,75 @@ a:active {
 	}
 
 	.classes-link {
-		@include absolute-link(81px, 23px, 148px, 65px);
+		@include absolute-link(81px, 23px, 148px, 66px);
+		background: #FFF;
+		cursor: pointer;
 
-		&.active {
+		&.active span {
 			border-bottom: 2px solid #ed1e79;
+		}
+
+		span {
+			@include font($din-medium);
+		}
+
+		&:hover {
+			left: 84px;
+			z-index: 2;
+			text-align: center;
+			height: 126px;
+			width: 204px;
+
+			.dropdown-menu {
+				display: block;
+				background: #FFF;
+				position: relative;
+				text-align: center;
+				list-style-type: none;
+				border: 1px solid #000;
+				width: 100%;
+				padding: 0;
+				margin-top: 40px;
+
+				&:after, &:before {
+					bottom: 100%;
+					left: 50%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+				}
+
+				&:after {
+					border-color: rgba(136, 183, 213, 0);
+					border-bottom-color: #FFF;
+					border-width: 25px;
+					margin-left: -25px;
+				}
+
+				&:before {
+					border-color: rgba(194, 225, 245, 0);
+					border-bottom-color: #000;
+					border-width: 26px;
+					margin-left: -26px;
+				}
+
+				ul {
+					padding: 0;
+					margin-bottom: 20px;
+				}
+
+				li {
+					list-style-type: none;
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		.dropdown-menu {
+			display: none;
 		}
 	}
 
