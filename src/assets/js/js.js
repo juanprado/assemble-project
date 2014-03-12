@@ -264,7 +264,10 @@ var formUpdate = {
 			}
 
 			filterJoined = "." + filterHolder.join('.');
+			$('.map-icon').css('display', 'none');
+			$(filterJoined).css('display', 'block');
 			console.log(filterJoined);
+
 		});
 	},
 
