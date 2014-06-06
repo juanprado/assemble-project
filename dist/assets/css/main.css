@@ -521,13 +521,13 @@ body {
 
 .page-wrap {
   min-height: 100%;
-  margin-bottom: -123px;
+  margin-bottom: -120px;
 }
 
 .page-wrap:after {
   content: '';
   display: block;
-  height: 123px;
+  height: 120px;
 }
 
 body {
@@ -550,6 +550,16 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  font-family: 'open-sans-light', sans-serif;
+  line-height: 160%;
+  margin-bottom: 10px;
+}
+
+.strong {
+  font-family: 'open-sans-semibold', sans-serif;
 }
 
 .main-header {
@@ -846,19 +856,19 @@ a:hover {
   text-align: center;
 }
 
-.about-us article {
+.about-us .about-us-content {
   width: 700px;
   margin: 45px auto 60px;
 }
 
-.about-us article h2 {
+.about-us .about-us-content h2 {
   font-family: 'open-sans-light', sans-serif;
   font-size: 30px;
   line-height: 100%;
   margin-bottom: 25px;
 }
 
-.about-us article p {
+.about-us .about-us-content article {
   -webkit-column-count: 2;
   -moz-column-count: 2;
   column-count: 2;
@@ -867,6 +877,42 @@ a:hover {
   -moz-column-gap: 90px;
   /* Firefox */
   column-gap: 90px;
+}
+
+.product-section {
+  width: 960px;
+  margin: 50px auto 40px;
+}
+
+.product-images {
+  float: left;
+  width: 45%;
+  text-align: center;
+}
+
+.product-images .main-image {
+  width: 330px;
+}
+
+.product-details {
+  float: right;
+  width: 50%;
+}
+
+.product-details h1 {
+  font-family: 'playfair-display', serif;
+  font-size: 36px;
+  line-height: 115%;
+  margin: 0 0 25px;
+}
+
+.product-details .price {
   font-family: 'open-sans-light', sans-serif;
-  line-height: 160%;
+  display: block;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.product-details p {
+  margin-bottom: 25px;
 }

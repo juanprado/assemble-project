@@ -20,7 +20,7 @@
 		}
 	}
 
-	article {
+	.about-us-content {
 		width: 700px;
 		margin: 45px auto 60px;
 
@@ -31,11 +31,9 @@
 			margin-bottom: 25px;
 		}
 
-		p {
+		article {
 			@include column-count(2);
 			@include column-gap(90px);
-			@include open-sans('light');
-			line-height: 160%;
 		}
 	}
 }

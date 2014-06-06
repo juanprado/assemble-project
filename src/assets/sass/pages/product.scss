@@ -1,0 +1,37 @@
+.product-section {
+    width: 960px;
+    margin: 50px auto 40px;
+}
+
+.product-images {
+    float: left;
+    width: 45%;
+    text-align: center;
+
+    .main-image {
+        width: 330px;
+    }
+}
+
+.product-details {
+    float: right;
+    width: 50%;
+
+    h1 {
+        @include playfair-display;
+        font-size: 36px;
+        line-height: 115%;
+        margin: 0 0 25px;
+    }
+
+    .price {
+        @include open-sans('light');
+        display: block;
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+}
