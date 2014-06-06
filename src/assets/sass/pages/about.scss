@@ -1,0 +1,41 @@
+.about-us {
+	width: 100%;
+	margin: 0 auto;
+
+	header {
+		@include border-box;
+		background: url(/assets/img/about-us-background.jpg);
+		background-size: cover;
+		height: 258px;
+		padding-top: 50px;
+		width: 100%;
+
+		h1 {
+			@include playfair-display;
+			color: #343737;
+			font-size: 70px;
+			line-height: 100%;
+			margin: 0;
+			text-align: center;
+		}
+	}
+
+	article {
+		width: 700px;
+		margin: 45px auto 60px;
+
+		h2 {
+			@include open-sans('light');
+			font-size: 30px;
+			line-height: 100%;
+			margin-bottom: 25px;
+		}
+
+		p {
+			@include column-count(2);
+			@include column-gap(90px);
+			@include open-sans('light');
+			line-height: 160%;
+		}
+	}
+}

@@ -133,25 +133,13 @@ module.exports = function(grunt){
           src: './src/pages/*.hbs',
           dest: './dist/'
         },
-        shop: {
-          src: './src/pages/shop/*.hbs',
-          dest: './dist/shop/'
+        collection: {
+          src: './src/pages/collection/*.hbs',
+          dest: './dist/collection/'
         },
-        women: {
-          src: './src/pages/shop/women/*.hbs',
-          dest: './dist/shop/women/'
-        },
-        product: {
-          src: './src/pages/shop/product/*.hbs',
-          dest: './dist/shop/product/'
-        },
-        cart: {
-          src: './src/pages/cart/*.hbs',
-          dest: './dist/cart/'
-        },
-        classes: {
-          src: './src/pages/classes/*.hbs',
-          dest: './dist/classes/'
+        about: {
+          src: './src/pages/about/*.hbs',
+          dest: './dist/about/'
         },
       },
           

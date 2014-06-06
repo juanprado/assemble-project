@@ -1,10 +1,7 @@
 @import "partials/normalize";
-@import "partials/fonts";
 @import "partials/var";
+@import "partials/fonts";
 @import "partials/base";
-@import "partials/layout";
 
-@import "partials/pages/shop";
-@import "partials/pages/cart";
-@import "partials/pages/map";
-@import "partials/pages/classes";
+@import "pages/collection";
+@import "pages/about";

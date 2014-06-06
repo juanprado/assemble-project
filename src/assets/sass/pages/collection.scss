@@ -1,0 +1,89 @@
+.collection {
+	width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.collection-header {
+	text-align: center;
+	margin-bottom: 30px;
+
+	h1 {
+		@include playfair-display;
+		color: #040404;
+		font-size: 46px;
+		line-height: 100%;
+		margin: 0 0 11px;
+	}
+
+	.num-of-items {
+		@include open-sans(semibold);
+		color: #676969;
+		text-transform: uppercase;
+	}
+}
+
+.collection .info-bar {
+	@include open-sans(semibold);
+	border-top: 1px solid #040404;
+	border-bottom: 1px solid #040404;
+	color: #040404;
+	font-size: 12px;
+	margin-bottom: 30px;
+	padding: 18px 0 16px;
+	text-transform: uppercase;
+}
+
+.collection-list {
+	font-size: 0;
+	padding: 0;
+	margin: 0 -25px 60px;
+
+	.collection-item {
+		@include border-box;
+		display: inline-block;
+		font-size: 12px;
+		line-height: 140%;
+		margin-bottom: 30px;
+		padding: 0 25px;
+		vertical-align: top;
+		width: 33.3%;
+
+		img, .collection-sale {
+			background: #d9e6e6;
+			height: 380px;
+			margin-bottom: 5px;
+			width: 100%;
+		}
+
+		.collection-title {
+			display: block;
+			@include open-sans(semibold);
+			text-transform: uppercase;
+		}
+	}
+}
+
+.collection-sale {
+	display: table;
+
+	.collection-sale-text {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.sale-title {
+		@include playfair-display;
+		display: block;
+		font-size: 46px;
+		line-height: 100%;
+		margin: 0 0 11px;
+	}
+
+	.sale-subtitle {
+		@include open-sans(semibold);
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+}

@@ -1,30 +1,47 @@
 <header class="main-header">
 	<a class="home-link" href="/"></a>
-	<a class="logo-link" href="/"></a>
-	<div class="classes-link {{#contains dirname 'classes'}}active{{/contains}}">
-		<span>CLASSES</span>
-		<nav class="dropdown-menu">
-			<ul>
-				<li><a href="/classes">Find a class</a></li>
-				<li><a href="/classes">Find an instructor</a></li>
-				<li><a href="/classes/#become-an-instructor">Become an instructor</a></li>
-		</nav>	
-	</div>
-	<a 
-		class="shop-link 
-		{{#contains dirname 'shop'}}active{{/contains}} 
-		{{#contains dirname 'cart'}}active{{/contains}}"
-		href="/shop"
-	></a>
-	<a 
-		class="header-cart-link 
-		{{#contains dirname 'cart'}}
-			{{#isnt page.name 'thank-you'}}
-				_active
-			{{/isnt}}
-		{{/contains}}" 
-		href="/cart/"
-	>
-		<span>1</span>
-	</a>
+	<nav class="header-nav">
+		<div class="header-nav-wrapper">
+			<ul class="main-nav">
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/collection">Collection</a>
+				</li>
+				<li>
+					<a href="/about">About us</a>
+				</li>
+				<li>
+					<a href="/blog">Blog</a>
+				</li>
+				<li>
+					<a href="/customer-care">Customer care</a>
+				</li>
+				<li>
+					<a href="/contact">Contact us</a>
+				</li>
+			</ul>
+			<ul class="secondary-nav">
+				<li>
+					<a>
+						<span class="icon-sweden"></span>
+						<span class="text">In swedish</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span class="icon-cart"></span>
+						<span class="text">Shopping cart</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span class="icon-search"></span>
+						<span class="text">Search</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </header>
