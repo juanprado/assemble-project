@@ -28,10 +28,34 @@
         @include open-sans('light');
         display: block;
         font-size: 26px;
-        margin-bottom: 25px;
     }
 
-    p {
-        margin-bottom: 25px;
+    p, .large-btn, .price {
+        margin-bottom: 35px;
+    }
+
+    .large-btn .icon-cart {
+        margin-right: 10px;
+    }
+}
+
+.product-features {
+    border-top: 1px solid #000;
+    padding: 15px 0;
+
+    .title {
+        @include open-sans('light');
+        display: block;
+        font-size: 21px;
+    }
+
+    ul {
+        // height: 0;
+        // overflow: hidden;
+
+        li {
+            @include open-sans('light');
+            line-height: 160%;
+        }
     }
 }
