@@ -1,4 +1,5 @@
 .product-section {
+    @include clearfix;
     width: 960px;
     margin: 50px auto 40px;
 }
@@ -21,7 +22,7 @@
         @include playfair-display;
         font-size: 36px;
         line-height: 115%;
-        margin: 0 0 25px;
+        margin: 0 0 30px;
     }
 
     .price {
@@ -40,22 +41,73 @@
 }
 
 .product-features {
-    border-top: 1px solid #000;
-    padding: 15px 0;
+    border-bottom: 1px solid #000;
+    padding: 18px 0 15px;
+    position: relative;
+
+    &:first-child {
+        border-top: 1px solid #000;
+    }
 
     .title {
         @include open-sans('light');
         display: block;
         font-size: 21px;
+        margin-left: 10px;
+    }
+
+    .slider-btn {
+        @include border-radius(100%);
+        border: 1px solid #343737;
+        background: #343737;
+        color: #fdfdfd;
+        display: block;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        top: 14px;
+        width: 20px;
+
+        &:hover {
+            background: #fdfdfd;
+            color: #343737;
+        }
+
+        &:after {
+            @include open-sans('light');
+            content: '+';
+            display: block;
+            font-size: 20px;
+            left: 50%;
+            margin: -6px 0 0 -6px;
+            position: absolute;
+            top: 50%;
+        }
+
+        &.open:after {
+            content: '-';
+            margin: -8px 0 0 -4px;
+        }
     }
 
     ul {
-        // height: 0;
-        // overflow: hidden;
+        max-height: 0;
+        overflow: hidden;
+        @include border-box;
+        padding-top: 5px;
+        list-style-type: disc;
+        margin-left: 30px;
+        transition: all 0.7s ease-out;
+
+        &.open {
+            max-height: 700px;
+            overflow: auto;
+        }
 
         li {
             @include open-sans('light');
             line-height: 160%;
+            margin-top: 10px;
         }
     }
 }
