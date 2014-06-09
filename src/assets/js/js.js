@@ -19,12 +19,12 @@ MOMANDMESCARF.slider = {
 			var sliderElement = $(this).parent().find('ul');
 			var isOpen = $(this).hasClass('open');
 
-			self.sliderElement.removeClass('open');
+			self.sliderElement.slideUp();
 			self.sliderBtn.removeClass('open');
 
 			if (!isOpen) {
 				$(this).addClass('open');
-				sliderElement.addClass('open');
+				sliderElement.slideDown();
 			}
 		});
 	},
@@ -36,3 +36,25 @@ MOMANDMESCARF.slider = {
 };
 
 MOMANDMESCARF.slider.init();
+
+// CAROUSEL 
+
+MOMANDMESCARF.carousel = {
+
+	cacheElems: function() {
+		this.slideshow = $('.homepage-slideshow-container .slideshow');
+	},
+
+	init: function() {
+		this.cacheElems();
+		this.slideshow.bxSlider({
+			mode: 'fade',
+			auto: true,
+			pause: 5000,
+			pager: false,
+			controls: false
+		});
+	}
+};
+
+MOMANDMESCARF.carousel.init();

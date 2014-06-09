@@ -1,0 +1,36 @@
+.homepage {
+    margin: 30px auto;
+    width: 870px;
+}
+
+.homepage-slideshow-container .slideshow {
+
+    .slide {
+        @include clearfix;
+        display: table;
+
+        img {
+            float: left;
+        }
+
+        article {
+            display: table-cell;
+            padding-left: 60px;
+            vertical-align: middle;
+
+            .title {
+                @include playfair-display;
+                color: #4b5050;
+                display: block;
+                font-size: 36px;
+                line-height: 110%;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+}

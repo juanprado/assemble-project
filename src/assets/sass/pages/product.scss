@@ -47,6 +47,10 @@
 
     &:first-child {
         border-top: 1px solid #000;
+
+        ul {
+            display: block;
+        }
     }
 
     .title {
@@ -57,52 +61,39 @@
     }
 
     .slider-btn {
-        @include border-radius(100%);
-        border: 1px solid #343737;
-        background: #343737;
-        color: #fdfdfd;
-        display: block;
-        height: 20px;
+        cursor: pointer;
         position: absolute;
-        right: 10px;
-        top: 14px;
-        width: 20px;
-
-        &:hover {
-            background: #fdfdfd;
-            color: #343737;
-        }
+        width: 50px;
+        height: 46px;
+        right: 0px;
+        top: 0px;
 
         &:after {
-            @include open-sans('light');
-            content: '+';
+            border-style: solid;
+            border-width: 7px 6px 0 6px;
+            border-color: #343737 transparent transparent transparent;
+            content: '';
             display: block;
-            font-size: 20px;
-            left: 50%;
-            margin: -6px 0 0 -6px;
+            height: 0;
             position: absolute;
-            top: 50%;
+            top: 20px;
+            right: 10px;
+            -webkit-transform:rotate(360deg);
+            width: 0;
         }
 
         &.open:after {
-            content: '-';
-            margin: -8px 0 0 -4px;
+            border-width: 0 6px 7px 6px;
+            border-color: transparent transparent #343737 transparent;
         }
     }
 
     ul {
-        max-height: 0;
-        overflow: hidden;
         @include border-box;
+        display: none;
         padding-top: 5px;
         list-style-type: disc;
         margin-left: 30px;
-        transition: all 0.7s ease-out;
-
-        &.open {
-            max-height: 700px;
-            overflow: auto;
-        }
 
         li {
             @include open-sans('light');
