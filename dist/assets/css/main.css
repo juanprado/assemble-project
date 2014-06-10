@@ -903,7 +903,7 @@ p {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: url(/assets/img/about-us-background.jpg);
+  background: url(./assets/img/about-us-background.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   height: 258px;
@@ -969,6 +969,32 @@ p {
 
 .product-images .main-image {
   width: 330px;
+}
+
+.image-picker {
+  display: inline-block;
+  font-size: 0;
+  margin: 5px -5px;
+  text-align: center;
+  width: 342px;
+}
+
+.image-picker li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px;
+  width: 33%;
+}
+
+.image-picker li img {
+  opacity: 0.5;
+  width: 100%;
+}
+
+.image-picker li img.active {
+  opacity: 1;
 }
 
 .product-details {
