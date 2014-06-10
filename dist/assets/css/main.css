@@ -903,7 +903,7 @@ p {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: url(./assets/img/about-us-background.jpg);
+  background: url(/assets/img/about-us-background.jpg);
   -webkit-background-size: cover;
   background-size: cover;
   height: 258px;
