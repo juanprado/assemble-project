@@ -59,6 +59,7 @@
 		.collection-title {
 			display: block;
 			@include open-sans(semibold);
+			margin-bottom: 8px;
 			text-transform: uppercase;
 		}
 	}

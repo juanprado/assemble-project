@@ -50,7 +50,7 @@ MOMANDMESCARF.carousel = {
 		this.slideshow.bxSlider({
 			mode: 'fade',
 			auto: true,
-			pause: 5000,
+			pause: 6500,
 			pager: false,
 			controls: false
 		});
