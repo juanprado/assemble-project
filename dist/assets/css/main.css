@@ -871,6 +871,29 @@ p {
   text-transform: uppercase;
 }
 
+.collection-list .collection-item .price {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.collection-list .collection-item .small-btn {
+  border: 1px solid black;
+  display: inline-block;
+  float: right;
+  padding: 3px 6px;
+  text-decoration: none;
+}
+
+.collection-list .collection-item .small-btn .icon-cart {
+  margin-right: 3px;
+}
+
+.collection-list .collection-item .small-btn:hover,
+.collection-list .collection-item .small-btn:active {
+  background: black;
+  color: white;
+}
+
 .collection-sale {
   display: table;
 }
