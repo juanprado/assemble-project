@@ -1013,7 +1013,7 @@ p {
   margin-bottom: 25px;
 }
 
-.about-us .about-us-content article {
+.about-us .about-us-content .column-content {
   -webkit-column-count: 2;
   -moz-column-count: 2;
   column-count: 2;
@@ -1022,6 +1022,22 @@ p {
   -moz-column-gap: 90px;
   /* Firefox */
   column-gap: 90px;
+}
+
+.about-us .about-us-content .nolte-logo {
+  font-size: 14px;
+  line-height: 150%;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-us .about-us-content .nolte-logo span {
+  display: block;
+}
+
+.about-us .about-us-content .nolte-logo .subtitle {
+  font-size: 11px;
 }
 
 .product-section {
