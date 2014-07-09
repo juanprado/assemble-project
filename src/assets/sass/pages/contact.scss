@@ -1,0 +1,97 @@
+.contact-us {
+	@include clearfix;
+	width: 830px;
+	margin: 60px auto;
+	
+	h2 {
+		font-family: playfair-display,serif;
+		color: #040404;
+		font-size: 36px;
+		line-height: 100%;
+		margin: 0 0 11px;
+	}
+
+	hr {
+		margin-bottom: 15px;
+	}
+
+	article, form {
+		float: left;
+		width: 530px;
+	}
+
+	aside {
+		float: right;
+		border-left: 1px solid #343737;
+		width: 200px;
+		padding-left: 30px;
+		margin-left: 30px;
+		padding-top: 25px;
+		margin-top: 44px;
+	}
+
+	.contact-card {
+		margin-bottom: 30px;
+
+		.title {
+			@include open-sans('semibold');
+			display: block;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+		.contact-info {
+			@include open-sans('light');
+			font-size: 12px;
+			font-style: normal;
+			line-height: 140%;
+			display: block;
+		}
+	}
+
+	form {
+		margin-top: 20px;
+
+		fieldset {
+			border: 0;
+			padding: 0;
+			margin: 0;
+			width: 45%;
+			float: left;
+		}
+
+		fieldset.alt {
+			float: right;
+		}
+
+		label {
+			@include open-sans('semibold');
+			display: block;
+			font-size: 12px;
+			margin-bottom: 3px;
+			text-transform: uppercase;
+			width: 100%;
+		}
+
+		input[type="text"], textarea {
+			@include border-box;
+			width: 100%;
+			margin-bottom: 20px;
+			background: #EEE;
+			padding: 7px;
+			border: 1px solid #000;
+		}
+
+		textarea {
+			height: 150px;
+		}
+
+		.large-btn {
+			padding: 5px 30px;
+			float: right;
+			border: 1px solid;
+		}
+
+	}
+
+}

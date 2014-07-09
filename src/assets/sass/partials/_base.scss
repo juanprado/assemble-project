@@ -45,6 +45,10 @@ p {
 	margin-bottom: 10px;
 }
 
+.center {
+	text-align: center;
+}
+
 .strong {
 	@include open-sans('semibold');
 }
