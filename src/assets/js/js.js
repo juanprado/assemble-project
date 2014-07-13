@@ -87,3 +87,55 @@ MOMANDMESCARF.imagePicker = {
 };
 
 MOMANDMESCARF.imagePicker.init();
+
+// STICKY NAV
+
+MOMANDMESCARF.stickyNav = {
+
+	cacheElems: function() {
+		this.nav = $('.customer-care nav');
+		this.navLink = this.nav.find('a');
+		this.section = $('.customer-care section');
+	},
+
+	navLinkBind: function() {
+		var self = this;
+
+		this.navLink.on('click', function() {
+			var id = $(this).data('href');
+
+			self.scrollAnimation(id);
+			self.navLink.removeClass('active');
+			$(this).addClass('active');
+		});
+	},
+
+	setStickyNav: function() {
+		var self = this;
+
+		$(window).scroll(function() {
+			var scrollTop = $(this).scrollTop();
+
+			if (scrollTop > 214) {
+				self.nav.addClass('sticky');
+			} else {
+				self.nav.removeClass('sticky');
+			}
+		});
+	},
+
+	scrollAnimation: function(id) {
+		$('html, body').animate({
+			scrollTop: $(id).offset().top
+		}, 1000);
+	},
+
+	init: function() {
+		this.cacheElems();
+		this.navLinkBind();
+		this.setStickyNav();
+	}
+
+};
+
+MOMANDMESCARF.stickyNav.init();

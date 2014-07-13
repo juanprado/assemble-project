@@ -145,6 +145,10 @@ module.exports = function(grunt){
           src: './src/pages/contact/*.hbs',
           dest: './dist/contact/'
         },
+        customer: {
+          src: './src/pages/customer/*.hbs',
+          dest: './dist/customer/'
+        },
       },
           
       connect: {
