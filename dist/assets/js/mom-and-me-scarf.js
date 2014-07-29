@@ -112,37 +112,58 @@ MOMANDMESCARF.stickyNav = {
 
 		this.navLink.on('click', function() {
 			var id = $(this).data('href');
-
-			self.scrollAnimation(id);
-			self.navLink.removeClass('active');
-			$(this).addClass('active');
+			var position = $(id).offset().top;
+			self.scrollAnimation(position);
 		});
 	},
 
 	setStickyNav: function() {
+		var scrollTop = $(window).scrollTop();
+
+		if (scrollTop > this.topPosition) {
+			this.nav.addClass('sticky');
+			this.setHorizontalPosition();
+		} else {
+			this.nav.removeClass('sticky');
+			this.nav.removeAttr('style');
+		}
+	},
+
+	stickyNavInit: function() {
+		this.topPosition = this.nav.offset().top;
 		var self = this;
 
 		$(window).scroll(function() {
-			var scrollTop = $(this).scrollTop();
-
-			if (scrollTop > 214) {
-				self.nav.addClass('sticky');
-			} else {
-				self.nav.removeClass('sticky');
-			}
+			self.setStickyNav();
 		});
 	},
 
-	scrollAnimation: function(id) {
+	setHorizontalPosition: function() {
+		var leftPosition = this.section.offset().left;
+		this.nav.css('left', leftPosition);
+	},
+
+	onWindowResize: function() {
+		var self = this;
+
+		$(window).resize(function() {
+			if (self.nav.hasClass('sticky')) {
+				self.setHorizontalPosition();
+			} 
+		});
+	},
+
+	scrollAnimation: function(position) {
 		$('html, body').animate({
-			scrollTop: $(id).offset().top
+			scrollTop: position
 		}, 1000);
 	},
 
 	init: function() {
 		this.cacheElems();
 		this.navLinkBind();
-		this.setStickyNav();
+		this.stickyNavInit();
+		this.onWindowResize();
 	}
 
 };
