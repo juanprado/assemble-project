@@ -1,6 +1,6 @@
 .product-section {
     @include clearfix;
-    width: 960px;
+    @include main-content;
     margin: 50px auto 40px;
 }
 

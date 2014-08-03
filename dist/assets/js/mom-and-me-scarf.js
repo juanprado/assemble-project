@@ -122,7 +122,7 @@ MOMANDMESCARF.stickyNav = {
 
 		if (scrollTop > this.topPosition) {
 			this.nav.addClass('sticky');
-			this.setHorizontalPosition();
+			// this.setHorizontalPosition();
 		} else {
 			this.nav.removeClass('sticky');
 			this.nav.removeAttr('style');
@@ -148,7 +148,7 @@ MOMANDMESCARF.stickyNav = {
 
 		$(window).resize(function() {
 			if (self.nav.hasClass('sticky')) {
-				self.setHorizontalPosition();
+				// self.setHorizontalPosition();
 			} 
 		});
 	},

@@ -1,3 +1,6 @@
+$break-large: 960px;
+$break-medium: 768px;
+
 @mixin border-box {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -36,4 +39,15 @@
 	-webkit-column-gap: $gap; /* Chrome, Safari, Opera */
 	-moz-column-gap:  $gap; /* Firefox */
 	column-gap: $gap;
+}
+
+@mixin main-content {
+	width: 960px;
+
+	@media (max-width: $break-large) {
+		@include border-box;
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }

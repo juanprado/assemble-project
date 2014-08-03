@@ -1,7 +1,6 @@
 .collection {
-	width: 960px;
-	margin: 0 auto;
-	padding: 30px 0;
+	@include main-content;
+	margin: 30px auto;
 }
 
 .collection-header {
@@ -51,7 +50,7 @@
 
 		img, .collection-sale {
 			background: #d9e6e6;
-			height: 380px;
+			height: auto;
 			margin-bottom: 5px;
 			width: 100%;
 		}
@@ -108,5 +107,24 @@
 		@include open-sans(semibold);
 		font-size: 14px;
 		text-transform: uppercase;
+	}
+}
+
+@media only screen and (max-width: $break-large) {
+
+	.collection-list {
+		margin: 0 -15px 60px;
+
+		.collection-item {
+			padding: 0 15px;
+		}
+	}
+
+}
+
+@media only screen and (max-width: $break-medium) {
+
+	.collection-list .collection-item{
+		width: 50%;
 	}
 }

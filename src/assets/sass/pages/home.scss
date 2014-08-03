@@ -1,6 +1,6 @@
 .homepage {
+    @include main-content;
     margin: 30px auto 50px;
-    width: 870px;
 }
 
 .homepage-slideshow-container .slideshow {

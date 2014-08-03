@@ -21,7 +21,7 @@
 	}
 
 	.about-us-content {
-		width: 700px;
+		@include main-content;
 		margin: 45px auto 60px;
 
 		h2 {
@@ -52,4 +52,13 @@
 			}
 		}
 	}
+}
+
+@media only screen and (max-width: $break-large) {
+
+	.about-us .about-us-content .column-content {
+		@include column-count(2);
+		@include column-gap(50px);
+	}
+
 }
