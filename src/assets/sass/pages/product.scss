@@ -10,7 +10,7 @@
     text-align: center;
 
     .main-image {
-        width: 330px;
+        width: 76.5%;
     }
 }
 
@@ -19,7 +19,7 @@
     font-size: 0;
     margin: 5px -5px;
     text-align: center;
-    width: 342px;
+    width: 80%;
 
     li {
         @include border-box;
@@ -125,5 +125,15 @@
             line-height: 160%;
             margin-top: 10px;
         }
+    }
+}
+
+@media only screen and (max-width: $break-small) {
+    .product-images {
+        width: 100%;
+    }
+
+    .product-details {
+        width: 100%;
     }
 }
