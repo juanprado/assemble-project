@@ -1477,10 +1477,13 @@ p {
   .product-images {
     width: 100%;
     text-align: left;
+    margin-bottom: 10px;
   }
 
   .product-images .main-image {
-    width: 74%;
+    width: 73%;
+    float: left;
+    padding-top: 7px;
   }
 
   .product-images ul {
@@ -1489,10 +1492,12 @@ p {
     box-sizing: border-box;
     width: 25%;
     margin: 0;
+    float: right;
   }
 
   .product-images ul li {
     width: 100%;
+    padding: 7px 5px 0;
   }
 
   .product-details {
@@ -1501,7 +1506,6 @@ p {
 
   .product-details h1 {
     font-size: 30px;
-    margin-bottom: 22px;
   }
 
   .product-details p,
