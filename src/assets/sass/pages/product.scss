@@ -129,11 +129,40 @@
 }
 
 @media only screen and (max-width: $break-small) {
+
+    .product-section {
+        margin: 20px auto 30px;
+    }
+
     .product-images {
         width: 100%;
+        text-align: left;
+
+        .main-image {
+            width: 74%;
+        }
+
+        ul {
+            @include border-box;
+            width: 25%;
+            margin: 0;
+
+            li {
+                width: 100%;
+            }
+        }
     }
 
     .product-details {
         width: 100%;
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+
+        p, .price, .large-btn {
+            margin-bottom: 20px;
+        }
     }
 }

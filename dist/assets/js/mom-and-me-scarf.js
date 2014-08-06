@@ -113,6 +113,7 @@ MOMANDMESCARF.stickyNav = {
 		this.navLink.on('click', function() {
 			var id = $(this).data('href');
 			var position = $(id).offset().top;
+
 			self.scrollAnimation(position);
 		});
 	},
@@ -129,8 +130,11 @@ MOMANDMESCARF.stickyNav = {
 	},
 
 	stickyNavInit: function() {
-		// this.topPosition = this.nav.offset().top;
 		var self = this;
+
+		if (this.nav.length >= 1) {
+			this.topPosition = this.nav.offset().top;
+		}
 
 		$(window).scroll(function() {
 			self.setStickyNav();

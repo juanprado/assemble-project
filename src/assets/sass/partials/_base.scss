@@ -226,6 +226,10 @@ p {
 
 @media only screen and (max-width: $break-small) {
 
+	body {
+		font-size: 13px;
+	}
+
 	.main-header { 
 
 		.home-link {

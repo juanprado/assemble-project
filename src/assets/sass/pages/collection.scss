@@ -130,12 +130,24 @@
 
 }
 
-@media only screen and (max-width: $break-medium) {
+@media only screen and (max-width: $break-small) {
 
-	.collection-header h1 {
-		font-size: 30px;
+	.collection {
+		margin: 20px 0 30px;
+
+		.info-bar {
+			margin-bottom: 20px;
+			padding: 14px 0 12px;
+		}
 	}
-	
+
+	.collection-header {
+		margin-bottom: 20px;
+
+		h1 {
+			font-size: 30px;
+		}
+	}
 }
 
 @media only screen and (max-width: 400px) {

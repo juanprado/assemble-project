@@ -62,3 +62,30 @@
 	}
 
 }
+
+@media only screen and (max-width: $break-small) {
+
+	.about-us {
+
+		header {
+			height: 120px;
+		}
+
+		.about-us-content {
+			margin: 25px 0;
+
+			h2 {
+				font-size: 24px;
+			}
+
+			.column-content {
+				@include column-count(1);
+			}
+
+			.nolte-logo {
+				padding: 10px 0;
+			}
+		}
+	}
+
+}

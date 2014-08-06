@@ -91,7 +91,44 @@
 			float: right;
 			border: 1px solid;
 		}
+	}
+}
 
+@media only screen and (max-width: $break-small) {
+
+	.contact-us {
+		margin: 20px 0 25px;
+
+		h2 {
+			font-size: 30px;
+		}
+
+		article {
+			border-bottom: 1px solid #343737;
+			border-right: none;
+			margin-bottom: 20px;
+			padding-right: 0;
+			padding-bottom: 20px;
+			width: 100%;
+		}
+
+		aside {
+			float: left;
+			width: 100%;
+			margin-top: 15px;
+
+			.contact-card {
+				float: left;
+				margin-bottom: 15px;
+				width: 50%;
+
+				&:nth-child(2n + 1) {
+					margin-right: 5%;
+					width: 45%;
+					clear: both;
+				}
+			}
+		}
 	}
 
 }

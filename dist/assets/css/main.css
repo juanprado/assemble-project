@@ -766,6 +766,10 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
+  body {
+    font-size: 13px;
+  }
+
   .main-header .home-link {
     height: 34px;
     width: 83px;
@@ -959,6 +963,10 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
+  .homepage {
+    margin: 20px 0 30px;
+  }
+
   .homepage-slideshow-container .slideshow .slide {
     zoom: 1;
     display: block;
@@ -1159,7 +1167,20 @@ p {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 650px) {
+  .collection {
+    margin: 20px 0 30px;
+  }
+
+  .collection .info-bar {
+    margin-bottom: 20px;
+    padding: 14px 0 12px;
+  }
+
+  .collection-header {
+    margin-bottom: 20px;
+  }
+
   .collection-header h1 {
     font-size: 30px;
   }
@@ -1262,6 +1283,30 @@ p {
     -moz-column-gap: 50px;
     /* Firefox */
     column-gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .about-us header {
+    height: 120px;
+  }
+
+  .about-us .about-us-content {
+    margin: 25px 0;
+  }
+
+  .about-us .about-us-content h2 {
+    font-size: 24px;
+  }
+
+  .about-us .about-us-content .column-content {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+  .about-us .about-us-content .nolte-logo {
+    padding: 10px 0;
   }
 }
 
@@ -1425,12 +1470,44 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
+  .product-section {
+    margin: 20px auto 30px;
+  }
+
   .product-images {
+    width: 100%;
+    text-align: left;
+  }
+
+  .product-images .main-image {
+    width: 74%;
+  }
+
+  .product-images ul {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    margin: 0;
+  }
+
+  .product-images ul li {
     width: 100%;
   }
 
   .product-details {
     width: 100%;
+  }
+
+  .product-details h1 {
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  .product-details p,
+  .product-details .price,
+  .product-details .large-btn {
+    margin-bottom: 20px;
   }
 }
 
@@ -1558,6 +1635,43 @@ p {
   border: 1px solid;
 }
 
+@media only screen and (max-width: 650px) {
+  .contact-us {
+    margin: 20px 0 25px;
+  }
+
+  .contact-us h2 {
+    font-size: 30px;
+  }
+
+  .contact-us article {
+    border-bottom: 1px solid #343737;
+    border-right: none;
+    margin-bottom: 20px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .contact-us aside {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .contact-us aside .contact-card {
+    float: left;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+
+  .contact-us aside .contact-card:nth-child(2n+1) {
+    margin-right: 5%;
+    width: 45%;
+    clear: both;
+  }
+}
+
 .customer-care {
   width: 960px;
   margin: 60px auto;
@@ -1636,4 +1750,66 @@ p {
   line-height: 130%;
   margin-bottom: 20px;
   padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 650px) {
+  .customer-care {
+    margin: 0 auto 25px;
+    padding-top: 90px;
+    position: relative;
+  }
+
+  .customer-care nav {
+    background: white;
+    position: absolute;
+    left: 18px;
+    top: 0;
+    right: 18px;
+    width: auto;
+  }
+
+  .customer-care nav ul {
+    zoom: 1;
+    border-right: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+
+  .customer-care nav ul:before,
+  .customer-care nav ul:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .customer-care nav ul:after {
+    clear: both;
+  }
+
+  .customer-care nav ul li {
+    float: left;
+    width: 50%;
+  }
+
+  .customer-care nav.sticky {
+    top: 0;
+  }
+
+  .customer-care section {
+    margin-left: 0;
+    padding-top: 100px;
+    margin-top: -90px;
+    width: 100%;
+  }
+
+  .customer-care section h2 {
+    font-size: 30px;
+  }
+
+  .customer-care section:first-child {
+    padding-top: 100px;
+  }
 }
