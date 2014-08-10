@@ -1019,6 +1019,10 @@ p {
     display: none;
   }
 
+  .small-gallery li img {
+    border: 4px solid #888f8f;
+  }
+
   .small-gallery ul {
     padding: 0 0px;
   }
@@ -1225,6 +1229,7 @@ p {
 
 .about-us .about-us-content {
   width: 960px;
+  zoom: 1;
   margin: 45px auto 60px;
 }
 
@@ -1239,6 +1244,18 @@ p {
   }
 }
 
+.about-us .about-us-content:before,
+.about-us .about-us-content:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.about-us .about-us-content:after {
+  clear: both;
+}
+
 .about-us .about-us-content h2 {
   font-family: 'open-sans-light', sans-serif;
   font-size: 30px;
@@ -1246,21 +1263,24 @@ p {
   margin-bottom: 25px;
 }
 
-.about-us .about-us-content .column-content {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 90px;
-  /* Chrome, Safari, Opera */
-  -moz-column-gap: 90px;
-  /* Firefox */
-  column-gap: 90px;
+.about-us .about-us-content .left,
+.about-us .about-us-content .right {
+  padding-top: 20px;
+  width: 45%;
+}
+
+.about-us .about-us-content .left {
+  float: left;
+}
+
+.about-us .about-us-content .right {
+  float: right;
 }
 
 .about-us .about-us-content .nolte-logo {
   font-size: 14px;
   line-height: 150%;
-  padding: 20px 0;
+  padding-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1273,17 +1293,16 @@ p {
   font-size: 11px;
 }
 
-@media only screen and (max-width: 960px) {
-  .about-us .about-us-content .column-content {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 50px;
-    /* Chrome, Safari, Opera */
-    -moz-column-gap: 50px;
-    /* Firefox */
-    column-gap: 50px;
-  }
+.about-us .about-us-content .about-us-logo {
+  text-indent: -9999px;
+  white-space: nowrap;
+  background: url(/assets/img/header-logo2.png) no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  display: block;
+  height: 46px;
+  margin: 0 auto 15px;
+  width: 110px;
 }
 
 @media only screen and (max-width: 650px) {
@@ -1299,10 +1318,13 @@ p {
     font-size: 24px;
   }
 
-  .about-us .about-us-content .column-content {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
+  .about-us .about-us-content .left,
+  .about-us .about-us-content .right {
+    width: 100%;
+  }
+
+  .about-us .about-us-content .right {
+    padding-top: 0;
   }
 
   .about-us .about-us-content .nolte-logo {

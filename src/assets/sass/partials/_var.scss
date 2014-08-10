@@ -52,3 +52,8 @@ $break-small: 650px;
 		padding-right: 20px;
 	}
 }
+
+@mixin hide-text {
+	text-indent: -9999px;
+    white-space: nowrap;
+}
