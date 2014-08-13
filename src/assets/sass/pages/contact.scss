@@ -120,13 +120,7 @@
 			.contact-card {
 				float: left;
 				margin-bottom: 15px;
-				width: 50%;
-
-				&:nth-child(2n + 1) {
-					margin-right: 5%;
-					width: 45%;
-					clear: both;
-				}
+				width: 100%;
 			}
 		}
 	}
