@@ -1,29 +1,15 @@
 .about-us {
-	width: 100%;
-	margin: 0 auto;
+	@include main-content;
+	margin: 25px auto 30px;
 
-	header {
-		@include border-box;
-		background: url(/assets/img/about-us-background.jpg);
-		background-size: cover;
-		height: 258px;
-		padding-top: 50px;
+	img {
+		height: auto;
 		width: 100%;
-
-		h1 {
-			@include playfair-display;
-			color: #343737;
-			font-size: 70px;
-			line-height: 100%;
-			margin: 0;
-			text-align: center;
-		}
 	}
 
 	.about-us-content {
-		@include main-content;
-
-		margin: 45px auto 60px;
+		width: 100%;
+		margin: 25px 0 40px 0;
 
 		h2 {
 			@include open-sans('light');
@@ -57,10 +43,11 @@
 			@include hide-text;
 
 			background: url(/assets/img/header-logo2.png) no-repeat;
-			background-size: 100%;
-			display: block;
-			height: 46px;
-			margin: 15px auto;
+			background-size: 85%;
+			display: inline-block;
+			float: left;
+			height: 45px;
+			margin: 8px 0 -14px 0;
 			width: 110px;
 		}
 	}
@@ -76,13 +63,14 @@
 @media only screen and (max-width: $break-small) {
 
 	.about-us {
+		margin: 15px 0 0;
 
 		header {
 			height: 120px;
 		}
 
 		.about-us-content {
-			margin: 25px 0;
+			margin: 15px 0;
 
 			h2 {
 				font-size: 24px;

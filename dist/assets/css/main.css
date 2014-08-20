@@ -1202,38 +1202,12 @@ p {
 }
 
 .about-us {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.about-us header {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url(/assets/img/about-us-background.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
-  height: 258px;
-  padding-top: 50px;
-  width: 100%;
-}
-
-.about-us header h1 {
-  font-family: 'playfair-display', serif;
-  color: #343737;
-  font-size: 70px;
-  line-height: 100%;
-  margin: 0;
-  text-align: center;
-}
-
-.about-us .about-us-content {
   width: 960px;
-  margin: 45px auto 60px;
+  margin: 25px auto 30px;
 }
 
 @media (max-width: 960px) {
-  .about-us .about-us-content {
+  .about-us {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -1241,6 +1215,16 @@ p {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+.about-us img {
+  height: auto;
+  width: 100%;
+}
+
+.about-us .about-us-content {
+  width: 100%;
+  margin: 25px 0 40px 0;
 }
 
 .about-us .about-us-content h2 {
@@ -1281,11 +1265,12 @@ p {
   text-indent: -9999px;
   white-space: nowrap;
   background: url(/assets/img/header-logo2.png) no-repeat;
-  -webkit-background-size: 100%;
-  background-size: 100%;
-  display: block;
-  height: 46px;
-  margin: 15px auto;
+  -webkit-background-size: 85%;
+  background-size: 85%;
+  display: inline-block;
+  float: left;
+  height: 45px;
+  margin: 8px 0 -14px 0;
   width: 110px;
 }
 
@@ -1300,12 +1285,16 @@ p {
 }
 
 @media only screen and (max-width: 650px) {
+  .about-us {
+    margin: 15px 0 0;
+  }
+
   .about-us header {
     height: 120px;
   }
 
   .about-us .about-us-content {
-    margin: 25px 0;
+    margin: 15px 0;
   }
 
   .about-us .about-us-content h2 {
