@@ -16,11 +16,11 @@ module.exports = function(grunt){
           tasks: ['style']
         },
         images:  {
-          files: ['./src/assets/img/**/*'],
+          files: ['./src/assets/**/*'],
           tasks: ['copy']
         },
         css: {
-          files: ['./dist/assets/css/*.css']
+          files: ['./dist/assets/*.css']
         },
         livereload: {
           files: ['./dist/**/*'],
@@ -37,7 +37,7 @@ module.exports = function(grunt){
           // the files to concatenate
           src: ['src/assets/**/*.js'],
           // the location of the resulting JS file
-          dest: './dist/assets/js/<%= pkg.name %>.js'
+          dest: './dist/assets/<%= pkg.name %>.js'
         }
       },
 
@@ -46,22 +46,12 @@ module.exports = function(grunt){
           files: [{
             expand: true,
             dot: true,
-            cwd: './src/assets',
-            dest: './dist/assets',
+            cwd: './src/',
+            dest: './dist/',
             src: [
-              'img/**'
+              'assets/**',
             ]
-          },
-          {
-            expand: true,
-            dot: true,
-            cwd: './src/assets',
-            dest: './dist/assets',
-            src: [
-              'fonts/**'
-            ]
-          }
-          ]
+          }]
         }
       },
         
@@ -72,7 +62,7 @@ module.exports = function(grunt){
         },
         dist: {
           files: {
-            './dist/assets/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+            './dist/assets/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
           }
         }
       },
@@ -94,7 +84,7 @@ module.exports = function(grunt){
       sass: {
         dist: {
           files: {
-             './dist/assets/css/main.css': './src/assets/sass/main.scss'
+             './dist/assets/main.css': './src/assets/sass/main.scss'
           }
         }
       },
@@ -105,7 +95,7 @@ module.exports = function(grunt){
             browsers: ['last 2 versions', '> 1%']
           },
           files: {
-            './dist/assets/css/main.css' : './dist/assets/css/main.css'
+            './dist/assets/main.css' : './dist/assets/main.css'
           }
         }
       },
@@ -117,7 +107,7 @@ module.exports = function(grunt){
           report: 'gzip'
           },
           files: {
-            './dist/assets/css/main.min.css' : './dist/assets/css/main.css'
+            './dist/assets/main.min.css' : './dist/assets/main.css'
           }
         }
       },
@@ -161,7 +151,8 @@ module.exports = function(grunt){
       },
     
       clean: {
-        all: ['./dist/*.html', './dist/assets/img/**', './dist/assets/fonts/**']
+        all: ['./dist/*.html', './dist/assets/**'],
+        assets: ['./dist/assets/sass/**', './dist/assets/js/**'],
       },
 
   });
@@ -180,7 +171,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('html', ['assemble', 'copy']);
+  grunt.registerTask('html', ['assemble']);
 
   grunt.registerTask('js', ['jshint', 'concat', 'uglify']);
 
@@ -190,6 +181,6 @@ module.exports = function(grunt){
 
   grunt.registerTask('pub', ['default']);
 
-  grunt.registerTask('default', ['js', 'style', 'copy', 'clean', 'html']);
+  grunt.registerTask('default', ['clean:all', 'js', 'style', 'copy', 'clean:assets', 'html']);
 
 };
