@@ -17,7 +17,7 @@ module.exports = function(grunt){
         },
         images:  {
           files: ['./src/assets/**/*'],
-          tasks: ['copy']
+          tasks: ['copy', 'clean:assets']
         },
         css: {
           files: ['./dist/assets/*.css']
